@@ -16,6 +16,10 @@ export const CartReviewWrapper = styled.div`
     padding: 2rem;
     display: flex;
     flex-direction: column;
+
+    a{
+        text-decoration: none;
+    }
 `
 export const ItemReview = styled.div`
     display: flex;
@@ -45,6 +49,7 @@ export const ConfirmButton = styled.button`
     align-items: center;
     justify-content: center;
     border: none;
+    width: 100%;
 
     &:hover{
         background: ${(props) => props.theme['yellow-dark']};

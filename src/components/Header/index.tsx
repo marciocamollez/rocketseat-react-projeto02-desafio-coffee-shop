@@ -9,7 +9,9 @@ export function Header() {
     <div>
       <HeaderContainer>
         <div>
-          <img src={Logo} alt="" />
+          <NavLink to="/">
+            <img src={Logo} alt="" />
+          </NavLink>
         </div>
         <section>
           <div className="location">

@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import imageSample from "../../../../../public/coffees/leite.png";
 import RemoveItemFromCart from "../RemoveItemFromCart";
+import { NavLink } from "react-router-dom";
 
 export function CartReview() {
   return (
@@ -44,7 +45,9 @@ export function CartReview() {
           </div>
         </ValueInfos>
 
-        <ConfirmButton>Confirmar Pedido</ConfirmButton>
+        <NavLink to="/success">
+          <ConfirmButton>Confirmar Pedido</ConfirmButton>
+        </NavLink>
       </CartReviewWrapper>
     </CartReviewContainer>
   );
