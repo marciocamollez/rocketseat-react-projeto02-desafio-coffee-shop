@@ -1,5 +1,7 @@
-import { ListItem } from "./styles";
+import { ListItem, ButtonAddToCart } from "./styles";
 import { coffees } from "../../data/coffees";
+import { QuantityInput } from "../QuantityInput";
+import { ShoppingCart } from "phosphor-react";
 
 export function CoffeeList() {
   return (
@@ -22,7 +24,14 @@ export function CoffeeList() {
           </div>
 
           <div className="coffee--item_price">
-            R$ <p>{coffee.price}</p>
+            <div>
+              R$ <p>{coffee.price}</p>
+            </div>
+
+            <QuantityInput />
+            <ButtonAddToCart>
+              <ShoppingCart size={20} />
+            </ButtonAddToCart>
           </div>
         </div>
       ))}

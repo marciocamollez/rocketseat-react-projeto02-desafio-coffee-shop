@@ -5,7 +5,7 @@ export const ListItem = styled.div`
     flex-wrap: wrap;
 
     .coffee--item{
-        max-width: 18%;
+        max-width: 23%;
         background: ${(props) => props.theme['card']};
         border-radius: 50px 0px 50px 0px;
         padding: 0.8rem;
@@ -66,6 +66,11 @@ export const ListItem = styled.div`
 
         .coffee--item_price{
             font-size: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
 
             p{
                 font-size: 1.5rem;
@@ -73,5 +78,21 @@ export const ListItem = styled.div`
                 display: inline-block;
             }
         }
+    }
+`
+
+export const ButtonAddToCart = styled.button`
+    color: ${(props) => props.theme['white']};
+    background: ${(props) => props.theme['purple']};
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+    &:hover{
+        background: ${(props) => props.theme['purple-dark']};
+        cursor: pointer;
     }
 `
