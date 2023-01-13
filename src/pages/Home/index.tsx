@@ -1,6 +1,6 @@
 import { HomeContainer, CoffeeContainer } from "./styles";
 import CompanyLogo from "../../assets/coffee.png";
-import { CoffeeList } from "../../components/CoffeeList";
+import { OurCoffees } from "../../components/OurCoffees";
 
 export function Home() {
   return (
@@ -101,7 +101,8 @@ export function Home() {
 
       <CoffeeContainer>
         <h2>Nossos Cafés</h2>
-        <CoffeeList />
+
+        <OurCoffees />
       </CoffeeContainer>
     </section>
   );
