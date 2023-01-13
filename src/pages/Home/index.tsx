@@ -1,8 +1,14 @@
 import { HomeContainer, CoffeeContainer } from "./styles";
 import CompanyLogo from "../../assets/coffee.png";
 import { CoffeeList } from "../../components/CoffeeList";
+import { useContext } from "react";
+import { Context } from "../../Context/AuthContext";
 
 export function Home() {
+  const { loading } = useContext(Context);
+
+  console.log(loading);
+
   return (
     <section>
       <HomeContainer>
@@ -101,7 +107,7 @@ export function Home() {
 
       <CoffeeContainer>
         <h2>Nossos Cafés</h2>
-        <CoffeeList />
+        {loading ? <CoffeeList /> : <h1>Nao foram encontrados cafés</h1>}
       </CoffeeContainer>
     </section>
   );

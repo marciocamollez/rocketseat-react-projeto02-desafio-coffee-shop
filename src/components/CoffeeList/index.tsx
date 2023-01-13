@@ -3,6 +3,15 @@ import { coffees } from "../../data/coffees";
 import { QuantityInput } from "../QuantityInput";
 import { ShoppingCart } from "phosphor-react";
 
+export interface Coffee {
+  id: number;
+  tags: string[];
+  name: string;
+  description: string;
+  photo: string;
+  price: number;
+}
+
 export function CoffeeList() {
   return (
     <ListItem>
