@@ -14,7 +14,7 @@ export function QuantityInput({
 }: QuantityInputProps) {
   return (
     <ChangeQuantity>
-      <ButtonQuantity onClick={onDecrease}>
+      <ButtonQuantity disabled={quantity <= 1} onClick={onDecrease}>
         <Minus size={20} />
       </ButtonQuantity>
       <input type="text" value={quantity} readOnly />
