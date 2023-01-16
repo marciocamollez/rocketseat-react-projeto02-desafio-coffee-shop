@@ -13,3 +13,10 @@ export const CartContainer = styled.div`
         padding-bottom: 0.5rem;
     }
 `
+export const CompleteOrderContainer = styled.form`
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+`

@@ -4,12 +4,16 @@ import {
   FormAddress,
   AddressWrapper,
 } from "./styles";
-import { MapPin, CreditCard, Money } from "phosphor-react";
+import { MapPin, CreditCard, Money, Bank } from "phosphor-react";
+import { useFormContext } from "react-hook-form";
 
 export function Form() {
+  const { register } = useFormContext();
+
   return (
     <FormContainer>
       <h1>Complete seu pedido</h1>
+
       <FormWrapper>
         <div>
           <div className="title--address">
@@ -20,33 +24,61 @@ export function Form() {
 
           <FormAddress>
             <AddressWrapper>
-              <input type="number" name="cep" placeholder="CEP" />
+              <input type="number" placeholder="CEP" {...register("cep")} />
+              {}
             </AddressWrapper>
             <AddressWrapper>
-              <input type="text" name="rua" placeholder="Rua" />
+              <input type="text" placeholder="Rua" {...register("rua")} />
             </AddressWrapper>
             <AddressWrapper>
-              <input type="number" name="numero" placeholder="N" />
-              <input type="text" name="complemento" placeholder="Complemento" />
+              <input type="number" {...register("numero")} placeholder="N" />
+              <input
+                type="text"
+                {...register("complemento")}
+                placeholder="Complemento"
+              />
             </AddressWrapper>
             <AddressWrapper>
-              <input type="text" name="bairro" placeholder="Bairro" />
-              <input type="text" name="cidade" placeholder="Cidade" />
-              <input type="text" name="estado" placeholder="Estado" />
+              <input type="text" {...register("bairro")} placeholder="Bairro" />
+              <input type="text" {...register("cidade")} placeholder="Cidade" />
+              <input type="text" {...register("estado")} placeholder="Estado" />
             </AddressWrapper>
             <AddressWrapper>
               <h2>Modo de pagamento:</h2>
             </AddressWrapper>
             <AddressWrapper>
-              <button>
-                <CreditCard size={20} /> Cartão de Crédito
-              </button>
-              <button>
-                <CreditCard size={20} /> Cartão de Débito
-              </button>
-              <button>
-                <Money size={20} /> Dinheiro
-              </button>
+              <input
+                type="radio"
+                id="credito"
+                value="credito"
+                {...register("fav_payment")}
+              />
+              <label htmlFor="credito">
+                <CreditCard size={20} />
+                Cartão de Crédito
+              </label>
+
+              <input
+                type="radio"
+                id="debito"
+                {...register("fav_payment")}
+                value="debito"
+              />
+              <label htmlFor="debito">
+                <Bank size={20} />
+                Cartão de Débito
+              </label>
+
+              <input
+                type="radio"
+                id="dinheiro"
+                {...register("fav_payment")}
+                value="dinheiro"
+              />
+              <label htmlFor="dinheiro">
+                <Money size={20} />
+                Dinheiro
+              </label>
             </AddressWrapper>
           </FormAddress>
         </div>

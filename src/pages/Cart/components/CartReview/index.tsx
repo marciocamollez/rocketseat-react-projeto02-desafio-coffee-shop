@@ -41,11 +41,10 @@ export function CartReview() {
               <p>R$ {cartTotal}</p>
             </div>
           </ValueInfos>
-          <NavLink to="/success">
-            <ConfirmButton disabled={cartQuantity <= 0}>
-              Confirmar Pedido
-            </ConfirmButton>
-          </NavLink>
+
+          <ConfirmButton disabled={cartQuantity <= 0} type="submit">
+            Confirmar Pedido
+          </ConfirmButton>
         </CartReviewWrapper>
       </CartReviewContainer>
     </>

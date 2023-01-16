@@ -25,7 +25,7 @@ export const FormWrapper = styled.div`
         align-items: center;
     }
 `
-export const FormAddress = styled.form`
+export const FormAddress = styled.section`
     display: flex;
     flex-direction: column;
 
@@ -47,13 +47,13 @@ export const FormAddress = styled.form`
 export const AddressWrapper = styled.div`
     display: flex;
     gap: 10px;
+    align-items: center;
 
     input{
         flex: 1;
     }
 
-    button{
-        flex: 1;
+    label{
         display: flex;
         align-items: center;
         justify-content: center;
