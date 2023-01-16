@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const ItemReview = styled.div`
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+`
+
 export const RemoveButton = styled.button`
     background: ${(props) => props.theme['button']};
     color: ${(props) => props.theme['purple']};

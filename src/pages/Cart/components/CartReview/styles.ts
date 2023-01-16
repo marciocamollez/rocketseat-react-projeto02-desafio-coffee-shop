@@ -21,11 +21,6 @@ export const CartReviewWrapper = styled.div`
         text-decoration: none;
     }
 `
-export const ItemReview = styled.div`
-    display: flex;
-    margin-bottom: 1rem;
-    align-items: center;
-`
 
 export const ValueInfos = styled.div`
     display: flex;
